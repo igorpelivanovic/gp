@@ -1,12 +1,1 @@
-<div class="map">
-    <mgl-map #map
-      [style]="'https://api.maptiler.com/maps/streets-v2/style.json?key='+API_KEY"
-      [zoom]="[16]"
-      [center]="[-74.005960, 40.710160]"
-      [attributionControl]="true"
-    >
-    <mgl-marker [lngLat]="[-74.005960, 40.710160]">
-    </mgl-marker>
-    <mgl-control mglNavigation [position]="'bottom-right'"></mgl-control>
-    </mgl-map>
-</div>
+<div class="map" #map></div>
