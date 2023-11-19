@@ -2,3 +2,14 @@
     width: 100%;
     height: 100%;
 }
+mgl-map {
+    height: 100%;
+    width: 100%;
+    .mapMarker{
+        color: #ffc451;
+    }
+    mgl-contro{
+        bottom: 0;
+        right: 0;
+    }
+  }

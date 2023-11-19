@@ -16,20 +16,20 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() zoom : number = 10
 
   private map : Map | undefined
-  private API_KEY : string = environment.MAP_API_KEY
+  protected API_KEY : string = environment.MAP_API_KEY
 
   constructor(){
 
   }
   ngAfterViewInit(): void {
-    this.map = new Map({
-      container: this.mapContainer.nativeElement,
-      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${this.API_KEY}`,
-      center: [this.long, this.lat],
-      zoom: this.zoom
-    })
-    this.map.addControl(new NavigationControl(), 'bottom-right');
-    new Marker({color: "#ffc451"}).setLngLat([this.long, this.lat]).addTo(this.map)
+    // this.map = new Map({
+    //   container: this.mapContainer.nativeElement,
+    //   style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${this.API_KEY}`,
+    //   center: [this.long, this.lat],
+    //   zoom: this.zoom
+    // })
+    // this.map.addControl(new NavigationControl(), 'bottom-right');
+    // new Marker({color: "#ffc451"}).setLngLat([this.long, this.lat]).addTo(this.map)
   }
 
   ngOnInit(): void {

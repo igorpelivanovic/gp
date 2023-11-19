@@ -545,6 +545,9 @@ Awesome, nor vice versa. **Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer.**
 
 
+@maplibre/ngx-maplibre-gl
+MIT
+
 keen-slider
 MIT
 MIT License

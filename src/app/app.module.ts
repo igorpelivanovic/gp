@@ -24,6 +24,7 @@ import { ClientsSwipperComponent } from './clients-swipper/clients-swipper.compo
 import { RouterModule } from '@angular/router';
 import { register } from "swiper/element/bundle";
 import { TestimonialsSwipperComponent } from './testimonials-swipper/testimonials-swipper.component';
+import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
 
 register()
 
@@ -54,6 +55,7 @@ register()
     FontAwesomeModule,
     BrowserAnimationsModule,
     RouterModule,
+    NgxMapLibreGLModule
   ],
   providers: [],
   bootstrap: [AppComponent],
