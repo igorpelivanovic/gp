@@ -1,0 +1,72 @@
+@use "sass:map";
+@import "./variables";
+
+@each $key, $val in $themeColor{
+    .text-color-#{$key}{
+        color: $val;
+    }
+    .before-text-color-#{$key}::before{
+        color: $val;
+    }
+    .after-text-color-#{$key}::after{
+        color: $val;
+    }
+    .bg-color-#{$key}{
+        background-color: $val;
+    }
+    .border-color-#{$key}{
+        border-color: $val;
+    }
+    .hover-bg-color-#{$key}:hover{
+        background-color: $val;
+    }
+    .hover-text-color-#{$key}:hover{
+        color: $val;
+    }
+    .hover-border-color-#{$key}:hover{
+        border-color: $val;
+    }
+}
+
+@for $i from 1 through 4{
+    .transition-delay-#{$i}{
+        transition-delay: $i*0.1s;
+    }
+}
+
+.fadeUp{
+    transform: translateY(100px);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-property:  transform, opacity;
+}
+
+.fadeLeft{
+    transform: translateX(100px);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: .25s;
+    transition-property:  transform, opacity;
+}
+.fadeRight{
+    transform: translateX(-100px);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: .1s;
+    transition-property:  transform, opacity;
+}
+
+.zoomOut{
+    transform: scale(.6);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-property:  transform, opacity;
+}
+
+.opacityClear{
+    opacity: 0;
+}
+
+.opacity{
+    opacity: 1;
+}

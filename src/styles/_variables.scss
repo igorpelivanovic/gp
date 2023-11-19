@@ -1,0 +1,26 @@
+@use "sass:map";
+
+$themeColor: (
+    "primary-yellow": #ffc451,
+    "primary-white": #fff ,
+    "secondery-white": #ebebeb,
+    "primary-gray": #444,
+    "secondery-gray": #848484,
+    "primary-light-gray": #aaa,
+    "secondery-light-gray": #292929,
+    "primary-black": #151515,
+    "secondery-black": #3b3b3b,
+    "black": #000,
+    "forest-white": #ffffff4d,
+    "transparent-white": #fffc,
+    "transparent-white-primary": #fff6,
+    "gray": #ddd
+);
+
+$mediaBreakPoints: (
+    "small": 576px,
+    "medium": 768px,
+    "large": 992px,
+    "extraLarge": 1200px,
+    "extraExtraLarge": 1400px
+)

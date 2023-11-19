@@ -1,0 +1,150 @@
+@use "sass:map";
+@import "./../../styles/variables";
+
+footer{
+    .btnContainer{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        button{
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+            transition: .4s;
+            transition-property: background-color color;
+            fa-icon{
+                display: flex;
+                font-size: 1rem;
+            }
+        }
+    }
+    .topFooter{
+        padding-block: 60px 20px;
+        border-width: 1px;
+        border-style: solid;
+        .container{
+           display: flex;
+           flex-direction: column;
+           gap: 8px;
+            .logoContainer{
+                h3{
+                    text-transform: uppercase;
+                    font-size: 1.75rem;
+                    &::after{
+                        content: ".";
+                    }
+                }
+            }
+            .addressContainer{
+                p{
+                    font-size: .9rem;
+                    text-transform: capitalize;
+                    line-height: 1.6;
+                }
+            }
+            .contactContainer{
+                margin-top: 30px;
+                p{
+                    margin-block: 5px;
+                    font-size: .90rem;
+                    line-height: 1.6;
+                    span.title{
+                        font-weight: 700;
+                        text-transform: capitalize;
+                        &::after{
+                            content: ":";
+                        }
+                    }
+                    a{
+                        margin-left: 5px;
+                    }
+                }
+                .socialContainer{
+                    ul{
+                        padding: 0;
+                        display: flex;
+                        list-style: none;
+                        gap: 8px;
+                        li{
+                            a{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 36px;
+                                height: 36px;
+                                border-radius: 4px;
+                                font-size: .95rem;
+                                transition: .3s;
+                                transition-property: color background-color;
+                                fa-icon{
+                                    display: flex;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .footerNavContainer{
+                margin-top: 5px;
+                h4{
+                    text-transform: capitalize;
+                    font-size: 1rem;
+                }
+                nav{
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 22px;
+                        margin-top: 18px;
+                        padding-inline: 14px;
+                        li{
+                            padding-left: 8px;
+                            a{
+                                display: block;
+                                font-size: .85rem;
+                                text-transform: capitalize;
+                                transition: .3s color;
+                            }
+                            &::marker{
+                                font-size: .7rem;
+                                content: "\f054";
+                                font-family: "FontAwesome";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottomFooter{
+        padding: 20px;
+        p{
+            font-family: "Open Sans", sans-serif;
+            text-transform: capitalize;
+            text-align: center;
+            font-size: .85rem;
+            span.logo{
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media (min-width: map.get($mediaBreakPoints, "medium")){
+    footer{
+        .topFooter{
+            padding-block-end: 50px;
+            .container{
+                flex-direction: row;
+                >*{
+                    flex: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+<section id="testimonials">
+    <div class="container fadeUp zoomOut opacityClear" appLoadingItem [rootMargin]="-100" [animationsClass]="['opacity', 'clearAnimation']">
+        <div class="keen-slider sliderContainer" #slidersContainer>
+            <div class="keen-slider__slide testimonials-item sliderItem text-color-primary-white">
+                <div class="userInfoContainer">
+                    <div class="imgContainer border-color-transparent-white-primary">
+                        <img src="assets/imgs/testimonials/testimonials-1.jpg" alt="testimonials-1">
+                    </div>
+                    <div class="titleContainer">
+                        <h3>saul goodman</h3>
+                        <p>ceo & founder</p>
+                    </div>
+                </div>
+                <div class="msgContainer text-color-secondery-white">
+                    <p class="before-text-color-secondery-white after-text-color-secondery-white">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+                </div>
+            </div>
+            <div class="keen-slider__slide testimonials-item sliderItem text-color-primary-white">
+                <div class="userInfoContainer">
+                    <div class="imgContainer border-color-transparent-white-primary">
+                        <img src="assets/imgs/testimonials/testimonials-2.jpg" alt="testimonials-2">
+                    </div>
+                    <div class="titleContainer">
+                        <h3>saul goodman</h3>
+                        <p>ceo & founder</p>
+                    </div>
+                </div>
+                <div class="msgContainer text-color-secondery-white">
+                    <p class="before-text-color-secondery-white after-text-color-secondery-white">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+                </div>
+            </div>
+            <div class="keen-slider__slide testimonials-item sliderItem text-color-primary-white">
+                <div class="userInfoContainer">
+                    <div class="imgContainer border-color-transparent-white-primary">
+                        <img src="assets/imgs/testimonials/testimonials-3.jpg" alt="testimonials-3">
+                    </div>
+                    <div class="titleContainer">
+                        <h3>saul goodman</h3>
+                        <p>ceo & founder</p>
+                    </div>
+                </div>
+                <div class="msgContainer text-color-secondery-white">
+                    <p class="before-text-color-secondery-white after-text-color-secondery-white">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+                </div>
+            </div>
+            <div class="keen-slider__slide testimonials-item sliderItem text-color-primary-white">
+                <div class="userInfoContainer">
+                    <div class="imgContainer border-color-transparent-white-primary">
+                        <img src="assets/imgs/testimonials/testimonials-4.jpg" alt="testimonials-4">
+                    </div>
+                    <div class="titleContainer">
+                        <h3>saul goodman</h3>
+                        <p>ceo & founder</p>
+                    </div>
+                </div>
+                <div class="msgContainer text-color-secondery-white">
+                    <p class="before-text-color-secondery-white after-text-color-secondery-white">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+                </div>
+            </div>
+            <div class="keen-slider__slide testimonials-item sliderItem text-color-primary-white">
+                <div class="userInfoContainer">
+                    <div class="imgContainer border-color-transparent-white-primary">
+                        <img src="assets/imgs/testimonials/testimonials-5.jpg" alt="testimonials-5">
+                    </div>
+                    <div class="titleContainer">
+                        <h3>saul goodman</h3>
+                        <p>ceo & founder</p>
+                    </div>
+                </div>
+                <div class="msgContainer text-color-secondery-white">
+                    <p class="before-text-color-secondery-white after-text-color-secondery-white">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+                </div>
+            </div>
+        </div>
+        <div class="dotsContainer">
+            <button *ngFor="let dot of dots; let i = index" (click)="slider.moveToIdx(i)" class="dot" [ngClass]="currentSlide == i ? 'bg-color-primary-yellow active' : 'bg-color-transparent-white-primary'"></button>
+        </div>
+    </div>
+</section>

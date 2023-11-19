@@ -1,0 +1,95 @@
+<header appLoadingItem appScrolled [scrollY]="100" [classList]="['scrolled']">
+    <div class="container">
+        <div class="logoContainer">
+            <h1 class="logo">
+                <a href="/" class="text-color-primary-white">
+                    <span>gp</span>
+                </a>
+            </h1>
+        </div>
+        <div class="navigationContainer">
+            <nav [ngClass]="{'mobile': showMobileMenu, }">
+                <div class="listContainer">
+                    <div class="closeHamburgerMenuContainer">
+                        <button type="button" class="text-color-primary-white" (click)="showMobileMenu = false">
+                            <span class="icon">
+                                <fa-icon [icon]="icon.faXmark"></fa-icon>
+                            </span>
+                        </button>
+                    </div>
+                    <ul [ngClass]="{'bg-color-primary-white': showMobileMenu, }">
+                        <li>
+                            <a (click)="goToSection('hero')" [ngClass]="showMobileMenu ? mobileNavStyle('hero') : desktopNavStyle('hero')">
+                                <span class="title">home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a (click)="goToSection('about')" [ngClass]="showMobileMenu ? mobileNavStyle('about') : desktopNavStyle('about')">
+                                <span class="title">about</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a (click)="goToSection('services')" [ngClass]="showMobileMenu ? mobileNavStyle('services') : desktopNavStyle('services')">
+                                <span class="title">services</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a (click)="goToSection('team')" [ngClass]="showMobileMenu ? mobileNavStyle('team') : desktopNavStyle('team')">
+                                <span class="title">team</span>
+                            </a>
+                        </li>
+                        <li>
+                            <p [ngClass]="showMobileMenu ? mobileNavStyle('') : desktopNavStyle('')" (click)="toggleDropDown()">
+                                <span class="title">drop down</span>
+                                <span class="icon">
+                                    <fa-icon [icon]="icon.faAngleDown"></fa-icon>
+                                </span>
+                            </p>
+                            <ul class="dropdownList bg-color-primary-white">
+                                <li>
+                                    <a href="/" class="text-color-primary-black hover-bg-color-primary-yellow">
+                                        <span class="title">drop down 1</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/" class="text-color-primary-black hover-bg-color-primary-yellow">
+                                        <span class="title">drop down 2</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/" class="text-color-primary-black hover-bg-color-primary-yellow">
+                                        <span class="title">drop down 3</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/" class="text-color-primary-black hover-bg-color-primary-yellow">
+                                        <span class="title">drop down 4</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a (click)="goToSection('contact')" [ngClass]="showMobileMenu ? mobileNavStyle('contact') : desktopNavStyle('contact')">
+                                <span class="title">contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="hamburgerMenuContainer">
+                <button type="button" class="text-color-primary-white" type="button" (click)="showMobileMenu = true">
+                    <span class="icon">
+                        <fa-icon [icon]="icon.faBars"></fa-icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="getStartBtnContainer">
+            <a href="#about" class="text-color-primary-white hover-text-color-primary-black hover-bg-color-primary-yellow border-color-primary-yellow">
+                <span>
+                    get started
+                </span>
+            </a>
+        </div>
+    </div>
+</header>

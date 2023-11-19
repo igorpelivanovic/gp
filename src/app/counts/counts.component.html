@@ -1,0 +1,60 @@
+<section id="counts" appSectionIndicator>
+    <div class="container fadeUp opacityClear" appLoadingItem [animationsClass]="['clearAnimation', 'opacity']">
+        <div class="imgContainer fadeRight" appLoadingItem [animationsClass]="['clearAnimation', 'opacity']">
+        </div>
+        <div class="sectionContent fadeLeft" appLoadingItem [animationsClass]="['clearAnimation', 'opacity']">
+            <div class="sectionHeadText">
+                <h3 class="text-color-primary-black">Voluptatem dignissimos provident quasi</h3>
+                <p class="text-color-primary-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit</p>
+            </div>
+            <div class="sectionBodyContainer">
+                <ul>
+                    <li>
+                        <div class="iconContainer">
+                            <span class="icon text-color-primary-yellow">
+                                <fa-icon [icon]="icon.faFaceSmile"></fa-icon>
+                            </span>
+                        </div>
+                        <div class="textContainer">
+                            <span class="count text-color-primary-black" appCounterLoader [defValue]="0" [endValue]="65" [loadDuration]="2000"></span>
+                            <p class="text-color-secondery-black"><span class="boldText">Happy Clients</span> consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="iconContainer">
+                            <span class="icon text-color-primary-yellow">
+                                <fa-icon [icon]="icon.faReceipt"></fa-icon>
+                            </span>
+                        </div>
+                        <div class="textContainer">
+                            <span class="count text-color-primary-black" appCounterLoader [defValue]="0" [endValue]="85" [loadDuration]="2000"></span>
+                            <p class="text-color-secondery-black"><span class="boldText">Projects</span> adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="iconContainer">
+                            <span class="icon text-color-primary-yellow">
+                                <fa-icon [icon]="icon.faClock"></fa-icon>
+                            </span>
+                        </div>
+                        <div class="textContainer">
+                            <span class="count text-color-primary-black" appCounterLoader [defValue]="0" [endValue]="35" [loadDuration]="4000"></span>
+                            <p class="text-color-secondery-black"><span class="boldText">Years of experience</span> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="iconContainer">
+                            <span class="icon text-color-primary-yellow">
+                                <fa-icon [icon]="icon.faAward"></fa-icon>
+                            </span>
+                        </div>
+                        <div class="textContainer">
+                            <span class="count text-color-primary-black" appCounterLoader [defValue]="0" [endValue]="20" [loadDuration]="4000"></span>
+                            <p class="text-color-secondery-black"><span class="boldText">Awards</span> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

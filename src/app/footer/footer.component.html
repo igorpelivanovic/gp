@@ -1,0 +1,83 @@
+<footer>
+    <div class="btnContainer" @opacityInOut *ngIf="showUpBtn">
+        <button appScrollTop class="bg-color-primary-yellow text-color-primary-black hover-bg-color-primary-black hover-text-color-primary-yellow">
+            <span class="icon">
+                <fa-icon [icon]="icon.faArrowUp"></fa-icon>
+            </span>
+        </button>
+    </div>
+    <div class="topFooter bg-color-primary-black">
+        <div class="container">
+            <div class="footerInfo">
+                <div class="logoContainer">
+                    <h3 class="text-color-primary-white">gp</h3>
+                </div>
+                <div class="addressContainer">
+                    <p class="text-color-primary-white">
+                        a108 adam street<br>NY 535022, USA
+                    </p>
+                </div>
+                <div class="contactContainer">
+                    <p class="text-color-primary-white">
+                        <span class="title">phone</span><a href="tel:+1 5589 55488 55" class="text-color-primary-white">+1 5589 55488 55</a><br>
+                        <span class="title">email</span><a href="mailto:info@example.com" class="text-color-primary-white">info@example.com</a>
+                    </p>
+                    <div class="socialContainer">
+                        <ul>
+                            <li>
+                                <a href="/" class="text-color-primary-white bg-color-secondery-light-gray hover-bg-color-primary-yellow hover-text-color-primary-black">
+                                    <span class="icon">
+                                        <fa-icon [icon]="icon.faTwitter"></fa-icon>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="text-color-primary-white bg-color-secondery-light-gray hover-bg-color-primary-yellow hover-text-color-primary-black">
+                                    <span class="icon">
+                                        <fa-icon [icon]="icon.faFacebookF"></fa-icon>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="text-color-primary-white bg-color-secondery-light-gray hover-bg-color-primary-yellow hover-text-color-primary-black">
+                                    <span class="icon">
+                                        <fa-icon [icon]="icon.faInstagram"></fa-icon>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="text-color-primary-white bg-color-secondery-light-gray hover-bg-color-primary-yellow hover-text-color-primary-black">
+                                    <span class="icon">
+                                        <fa-icon [icon]="icon.faSkype"></fa-icon>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="text-color-primary-white bg-color-secondery-light-gray hover-bg-color-primary-yellow hover-text-color-primary-black">
+                                    <span class="icon">
+                                        <fa-icon [icon]="icon.faLinkedinIn"></fa-icon>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footerNavContainer">
+                <h4 class="text-color-primary-white">useful links</h4>
+                <nav>
+                    <ul>
+                        <li><a href="#hero" class="text-color-primary-white hover-text-color-primary-yellow" >home</a></li>
+                        <li><a href="#about" class="text-color-primary-white hover-text-color-primary-yellow" >about us</a></li>
+                        <li><a href="#services" class="text-color-primary-white hover-text-color-primary-yellow" >services</a></li>
+                        <li><a href="#team" class="text-color-primary-white hover-text-color-primary-yellow" >team</a></li>
+                        <li><a href="#contact" class="text-color-primary-white hover-text-color-primary-yellow" >contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="bottomFooter bg-color-black">
+        <p class="text-color-primary-white">&copy; copyright <span class="logo">gp</span>. all rights reserved <span class="year">2023</span></p>
+    </div>
+</footer>

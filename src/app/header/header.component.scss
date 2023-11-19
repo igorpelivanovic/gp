@@ -1,0 +1,232 @@
+@use "sass:map";
+@import "./../../styles/variables";
+
+header{
+    display: flex;
+    align-items: center;
+    padding-block: 16px;
+    transition: .3s background-color;
+    &.scrolled{
+        background-color: rgba(0, 0, 0, .8); 
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        .logoContainer{
+            h1.logo{
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 2.0rem;
+                letter-spacing: 2px;
+                a{
+                    display: block;
+                    span::after{
+                        content: ".";
+                    }
+                }
+            }
+            margin-inline: 0 auto;
+        }
+        .navigationContainer{
+            order: 3;
+            nav{
+                background-color: rgba(0, 0, 0, .9);
+                display: none;
+                &.mobile{
+                    display: block;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 15px;
+                    .listContainer{
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        gap: 15px;
+                        ul{
+                            align-self: stretch;
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0;
+                            list-style: none;
+                            padding: 0;
+                            padding: 10px 0;
+                            li{
+                                cursor: pointer;
+                                &:hover{
+                                    ul.dropdownList{
+                                        display: flex;
+                                    }
+                                }
+                                a, p{
+                                    text-transform: capitalize;
+                                    padding: 12px 20px;
+                                    font-size: 1rem;
+                                    font-weight: 600;
+                                    display: block;
+                                    margin: 0;
+                                }
+                                p{
+                                    display: flex;
+                                    justify-content: space-between;
+                                }
+                                ul.dropdownList{
+                                    padding: 10px 20px;
+                                    display: none;
+                                    li{
+                                        a{
+                                            font-size: .95rem;
+                                            font-weight: 400;
+                                            font-family: "Open Sans", sans-serif;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .closeHamburgerMenuContainer{
+                            button{
+                                border: 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 28px;
+                                height: 28px;
+                                background-color: transparent;
+                                span.icon{
+                                    font-size: 1.3rem;
+                                    fa-icon{
+                                        display: flex;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .hamburgerMenuContainer{
+                button{
+                    display: block;
+                    background-color: transparent;
+                    border: 0;
+                    span.icon{
+                        font-size: 1.5rem;
+                        fa-icon{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+        .getStartBtnContainer{
+            a{
+                padding: 6px 25px;
+                border-radius: 4px;
+                border-width: 2px;
+                border-style: solid;
+                white-space: nowrap;
+                font-family: 'Open Sans', sans-serif;
+                transition: .3s;
+                transition-property: background-color color;
+                span{
+                    text-transform: capitalize;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map.get($mediaBreakPoints, "large")){
+    header{
+        .container{
+            .logoContainer{
+                order: 1;
+                margin: 0;
+            }
+            .navigationContainer{
+                order: 2;
+                nav, nav.mobile{
+                    background-color: transparent;
+                    display: block;
+                    position: static;
+                    .listContainer{
+                        >ul{
+                            background-color: transparent;
+                            display: flex;
+                            flex-direction: row;
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            gap: 30px;
+                            li{
+                                cursor: pointer;
+                                position: relative;
+                                a,p{
+                                    display: block;
+                                    margin: 0;
+                                    text-transform: capitalize;
+                                    font-weight: 700;
+                                    font-size: .95rem;
+                                    padding-block: 10px;
+                                    span.icon{
+                                        padding-left: 5px;
+                                    }
+                                }
+                                &:hover{
+                                    ul.dropdownList{
+                                       visibility: visible;
+                                       opacity: 1;
+                                       transform: translateY(-30px);
+                                    }
+                                }
+                                ul.dropdownList{
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    position: absolute;
+                                    top: calc(100% + 30px);
+                                    left: 0;
+                                    width: 200px;
+                                    padding: 10px 0;
+                                    border-radius: 2px;
+                                    transition: .3s;
+                                    transition-property: transform opacity;
+                                    list-style: none;
+                                    li{
+                                        a{
+                                            display: block;
+                                            padding: 10px;
+                                            font-size: .9rem;
+                                            transition: .3s;
+                                            transition-property: background-color;
+                                            font-family: 'Open Sans', sans-serif;
+                                            span.title{
+                                                font-weight: 400;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .closeHamburgerMenuContainer{
+                            display: none;
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                }
+                .hamburgerMenuContainer{
+                    display: none;
+                }
+            }
+            .getStartBtnContainer{
+                order: 3;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+section#cta{
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)) ,url("./../../assets/imgs/cta-bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding-block: 60px 55px;
+    .container{
+        text-align: center;
+        h3{
+            text-transform: capitalize;
+            font-size: 1.75em;
+            margin: 0;
+        }
+        p{
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.4;
+            font-size: 1rem;
+            margin-block: 10px 25px;
+        }
+        a{  
+            display: block;
+            width: fit-content;
+            margin-inline: auto;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 4px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            padding: 10px 30px;
+            transition: .3s;
+            transition-property: border background-color color;
+            span.title{
+                text-transform: capitalize;
+                font-weight: 600;
+            }
+        }
+    }
+}

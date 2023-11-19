@@ -1,0 +1,115 @@
+@use "sass:map";
+@import "./variables";
+
+*{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+h2{
+    font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+    //scroll-padding-top: 50px;
+}
+body{
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    scrollbar-width: thin;    
+    &::-webkit-scrollbar{
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb{
+        border-radius: 3px;
+    }
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        z-index: 10000;
+    }
+    .clearAnimation{
+        transform: none;
+    }
+    section{
+        overflow: hidden;
+    }
+    .container{
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 12px;
+        .sectionTitleContainer{
+            h3{
+                text-transform: uppercase;
+                font-size: .9rem;
+                letter-spacing: 1px;
+                position: relative;
+                width: fit-content;
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                letter-spacing: 2px;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    margin-left: 10px;
+                    transform: translateY(-50%);
+                    width: 120%;
+                    height: 1px;
+                }
+            }
+            p{
+                font-family: "Poppins", sans-serif;
+                margin-block: 5px;
+                font-size: 2.2em;
+                font-weight: 700;
+                text-transform: uppercase;
+                line-height: 1.4;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+@media (min-width: map.get($mediaBreakPoints, "small")) {
+    body{
+        .container{
+            width: 540px;
+        }
+    }
+}
+@media (min-width: map.get($mediaBreakPoints, "medium")) {
+    body{
+        .container{
+            width: 720px;
+        }
+    }
+}
+@media (min-width: map.get($mediaBreakPoints, "large")) {
+    body{
+        .container{
+            width: 960px;
+        }
+    }
+}
+@media (min-width: map.get($mediaBreakPoints, "extraLarge")) {
+    body{
+        .container{
+            width: 1140px;
+        }
+    }
+}
+@media (min-width: map.get($mediaBreakPoints, "extraExtraLarge")) {
+    body{
+        .container{
+            width: 1320px;
+        }
+    }
+}

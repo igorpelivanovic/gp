@@ -1,0 +1,99 @@
+@use "sass:map";
+@import "./variables";
+
+body{
+    scrollbar-color: map.get($themeColor, "primary-yellow") transparent;
+    &::-webkit-scrollbar-thumb{
+        background-color: map.get($themeColor, "primary-yellow");
+    }
+    header{
+        .container{
+            .logoContainer{
+                h1{
+                    a{
+                        span::after{
+                            color: map.get($themeColor, "primary-yellow")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section{
+        &#hero{
+            .container{
+                .heroTitleContainer{
+                    h2::after{
+                        color: map.get($themeColor, "primary-yellow")
+                    }
+                }
+            }
+        }
+        &#about{
+            .container{
+                .textContainer{
+                    .text{
+                        ul{
+                            li::marker{
+                                color: map.get($themeColor, "primary-yellow");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &#services{
+            .container{
+                .sectionTitleContainer{
+                    h3::after{
+                        background-color: map.get($themeColor, "primary-yellow");
+                    }
+                }
+            }
+        }
+        &#team{
+            .container{
+                .sectionTitleContainer{
+                    h3::after{
+                        background-color: map.get($themeColor, "primary-yellow");
+                    }
+                }
+                .sectionBodyContainer{
+                    article{
+                        border-color: rgba(183, 183, 183, 0.3);
+                    }
+                }
+            }
+        }
+        &#contact{
+            .container{
+                .sectionTitleContainer{
+                    h3::after{
+                        background-color:  map.get($themeColor, "primary-yellow");
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .topFooter{
+            border-color: #222;
+            .container{
+                .logoContainer{
+                    h3::after{
+                        color: map.get($themeColor, "primary-yellow");
+                    }
+                }
+                .footerNavContainer{
+                    nav{
+                        ul{
+                            li::marker{
+                                color: map.get($themeColor, "primary-yellow");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

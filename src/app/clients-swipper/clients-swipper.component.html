@@ -1,0 +1,17 @@
+<section id="clients">
+    <div class="container zoomOut opacityClear" appLoadingItem [animationsClass]="['clearAnimation', 'opacity']">
+        <div class="slidersContainer keen-slider" #slidersContainer>
+            <div class="slideContainer keen-slider__slide"><img alt="client-1" src="assets/imgs/clients/client-1.png"></div>
+            <div class="slideContainer keen-slider__slide"><img alt="client-2" src="assets/imgs/clients/client-2.png"></div>
+            <div class="slideContainer keen-slider__slide"><img alt="client-3" src="assets/imgs/clients/client-3.png"></div>
+            <div class="slideContainer keen-slider__slide"><img alt="client-4" src="assets/imgs/clients/client-4.png"></div>
+            <div class="slideContainer keen-slider__slide"><img alt="client-5" src="assets/imgs/clients/client-5.png"></div>
+            <div class="slideContainer keen-slider__slide"><img alt="client-6" src="assets/imgs/clients/client-6.png"></div>
+            <div class="slideContainer keen-slider__slide"><img alt="client-7" src="assets/imgs/clients/client-7.png"></div>
+            <div class="slideContainer keen-slider__slide"><img alt="client-8" src="assets/imgs/clients/client-8.png"></div>
+        </div>
+        <div class="dotsContainer">
+            <button *ngFor="let dot of dots; let i = index" (click)="slider.moveToIdx(i)" class="dot" [ngClass]="i == currentSlide ? 'bg-color-primary-yellow': 'bg-color-gray'"></button>
+        </div>
+    </div>
+</section>

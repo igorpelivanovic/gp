@@ -1,0 +1,110 @@
+@use "sass:map";
+@import "./../../styles/variables";
+
+section#team{
+    padding-block: 80px 70px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .sectionBodyContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            article{
+                border-radius: 5px;
+                overflow: hidden;
+                border-width: 1px;
+                border-style: solid;
+                &:hover{
+                    .imgContainer{
+                        .socialMediaContainer{
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(30px);
+                        }
+                    }
+                }
+                .imgContainer{
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                    }
+                    .socialMediaContainer{
+                        position: absolute;
+                        bottom: 30px;
+                        left: 0;
+                        width: 100%;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: .3s ease-in-out;
+                        transition-property: opacity transform;
+                        ul{
+                            margin: 0 0 15px;
+                            padding: 0;
+                            display: flex;
+                            list-style: none;
+                            justify-content: center;
+                            gap: 10px;
+                            li{
+                                a{  
+                                    width: 36px;
+                                    height: 36px;
+                                    border-radius: 4px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    span.icon{
+                                        font-size: 1.1rem;
+                                        fa-icon{
+                                            display: flex;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .textContainer{
+                    padding: 30px 15px;
+                    h4{
+                        font-size: 600;
+                        font-size: 1.1rem;
+                        margin-bottom: 5px;
+                    }
+                    span{
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map.get($mediaBreakPoints, "medium")){
+    section#team{
+        .container{
+            .sectionBodyContainer{
+                flex-direction: row;
+                flex-wrap: wrap;
+                article{
+                    flex: 1 0 40%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map.get($mediaBreakPoints, "large")){
+    section#team{
+        .container{
+            .sectionBodyContainer{
+                article{
+                    flex: 1 ;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@use "sass:map";
+@import "./../../styles/variables";
+
+section#counts{
+    padding-block: 80px 50px;
+    .container{
+        .imgContainer{
+            min-height: 400px;
+            margin-inline: -12px;
+            background: url("./../../assets/imgs/counts-img.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .sectionContent{
+            padding: 30px 0;
+            .sectionHeadText{
+                padding-inline: 12px;
+                h3{
+                    font-family: "Raleway", sans-serif;
+                    font-size: 2.1em;
+                    line-height: 1.2;
+                }
+                p{
+                    font-family: "Open Sans", sans-serif;
+                    margin-block: 8px;
+                    line-height: 1.4;
+                    font-size: 1em;
+                }
+            }
+            .sectionBodyContainer{
+                ul{
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    li{
+                        display: flex;
+                        .iconContainer{
+                            flex: 0 0 60px;
+                            display: flex;
+                            justify-content: center;
+                            padding-top: 20px;
+                            span.icon{
+                                font-size: 2rem;
+                                fa-icon{
+                                    display: flex;
+                                }
+                            }
+                        }
+                        .textContainer{
+                            .count{
+                                font-family: "Open Sans", sans-serif;
+                                font-weight: 700;
+                                font-size: 2.3rem;
+                            }
+                            p{
+                                margin-block: 10px;
+                                font-size: .87rem;
+                                line-height: 1.5;
+                                span.boldText{
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map.get($mediaBreakPoints, "medium")){
+    section#counts{
+        .container{
+            .sectionContent{
+                .sectionBodyContainer{
+                    ul{
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                        li{
+                            flex: 1 0 40%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: map.get($mediaBreakPoints, "extraLarge")){
+    section#counts{
+        .container{
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            .imgContainer{
+                flex: 0 0 42.5%;
+            }
+            .sectionContent{
+                padding: 0;
+               flex: 1;
+            }
+        }
+    }
+}
+

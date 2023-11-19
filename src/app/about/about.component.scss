@@ -1,0 +1,87 @@
+@use "sass:map";
+@import "./../../styles/variables";
+
+section#about{
+    padding-block: 60px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .imgContainer{
+            img{
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .textContainer{
+            display: flex;
+            flex-direction: column;
+            .headText{
+                h3{
+                    font-family: "Poppins", sans-serif;
+                    font-size: 1.75rem;
+                    line-height: 1.2;
+                }
+            }
+            .text{
+                p{
+                    line-height: 1.3;
+                }
+                p:not(.italicText){
+                    font-size: 1.0rem;
+                    font-family: 'Open Sans', sans-serif;
+                    line-height: 1.5;
+                }
+                p.italicText{
+                    font-style: italic;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                ul{
+                    margin-block: 30px 40px;
+                    padding-inline: 20px;
+                    font-family: 'Open Sans', sans-serif;
+                    li{
+                        &::marker{
+                            font-family: FontAwesome;
+                            content: "\f00c";
+                        }
+                        p{
+                            margin: 10px 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map.get($mediaBreakPoints, "large")){
+    section#about{
+        .container{
+            flex-direction: row-reverse;
+            gap: 10px;
+            .imgContainer{
+                flex: 1;
+            }
+            .textContainer{
+                flex: 0 0 50%;
+                .text{
+                    p.italicText{
+                        line-height: 1.5;
+                        font-size: 1rem;
+                        margin-block: 10px;
+                    }
+                    ul{
+                        margin-block: 18px 30px;
+                        li{
+                            p{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+<section id="contact" appSectionIndicator>
+    <div class="container fadeUp opacityClear" appLoadingItem [animationsClass]="['clearAnimation', 'opacity']">
+        <div class="sectionTitleContainer">
+            <h3 class="text-color-primary-light-gray">contact</h3>
+            <p class="text-color-primary-black">contact us</p>
+        </div>
+        <div class="sectionBodyContainer">
+            <div class="mapsContainer bg-color-primary-black">
+                <app-map [lat]="40.710160" [long]="-74.005960" [zoom]="16"></app-map>
+            </div>
+            <div class="contactsContainer">
+                <ul>
+                    <li>
+                        <div class="iconContainer bg-color-primary-yellow">
+                            <span class="icon text-color-primary-black">
+                                <fa-icon [icon]="icon.faLocationDot"></fa-icon>
+                            </span>
+                        </div>
+                        <div class="textContainer">
+                            <h4 class="text-color-primary-black">location</h4>
+                            <p class="text-color-primary-gray">A108 Adam Street, New York, NY 535022</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="iconContainer bg-color-primary-yellow">
+                            <span class="icon text-color-primary-black">
+                                <fa-icon [icon]="icon.faEnvelope"></fa-icon>
+                            </span>
+                        </div>
+                        <div class="textContainer">
+                            <h4 class="text-color-primary-black">email</h4>
+                            <a href="mailTo:info@example.com"  class="text-color-primary-gray">info@example.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="iconContainer bg-color-primary-yellow">
+                            <span class="icon text-color-primary-black">
+                                <fa-icon [icon]="icon.faMobileScreenButton"></fa-icon>
+                            </span>
+                        </div>
+                        <div class="textContainer">
+                            <h4 class="text-color-primary-black">call</h4>
+                            <a href="tel:+1 5589 55488 55s"  class="text-color-primary-gray">+1 5589 55488 55s</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,88 @@
+@use "sass:map";
+@import "./../../styles/variables";
+
+section#contact{
+    padding-block: 60px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .sectionBodyContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            .mapsContainer{
+                width: 100%;
+                height: 270px;
+            }
+            .contactsContainer{
+                ul{
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    margin: 0;
+                    li{
+                        display: flex;
+                        gap: 15px;
+                        .iconContainer{
+                            flex: 0 0 44px;
+                            height: 44px;
+                            align-self: flex-start;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            span.icon{
+                                font-size: 1.3rem;
+                                fa-icon{
+                                    display: flex;
+                                }
+                            }
+                        }
+                        .textContainer{
+                            flex: 1;
+                            h4, p{
+                                margin: 0;
+                            }
+                            h4{
+                                text-transform: capitalize;
+                                position: relative;
+                                position: relative;
+                                font-size: 1.35rem;
+                                margin-bottom: 8px;
+                                &::after{
+                                    content: ":";
+                                }
+                            }
+                            p{
+                                font-family: "Open Sans", sans-serif;
+                            }
+                            p,a{
+                                font-size: .88rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map.get($mediaBreakPoints, "extraExtraLarge")){
+    section#contact{
+        .container{
+            .sectionBodyContainer{
+                .contactsContainer{
+                    ul{
+                        flex-direction: row;
+                        li{
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
