@@ -1,6 +1,6 @@
 # GP
 
-## 📔WHAT IS IT?
+## :notebook_with_decorative_cover:WHAT IS IT?
 
 GP aplication present website of company for provision of IT services. Made in Angular + SCSS and use MapLibre-GL-JS library.
 
