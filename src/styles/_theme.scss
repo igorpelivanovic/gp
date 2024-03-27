@@ -1,11 +1,18 @@
 @use "sass:map";
 @import "./variables";
 
-body{
-    scrollbar-color: map.get($themeColor, "primary-yellow") transparent;
-    &::-webkit-scrollbar-thumb{
+@supports (not selector(::-webkit-scrollbar)) and (not selector(::-webkit-scrollbar-thumb)){
+    *{
+        scrollbar-color: map.get($themeColor, "primary-yellow") transparent;
+    }
+}
+@supports selector(::-webkit-scrollbar) and selector(::-webkit-scrollbar-thumb){
+    ::-webkit-scrollbar-thumb{
         background-color: map.get($themeColor, "primary-yellow");
     }
+}
+
+body{
     header{
         .container{
             .logoContainer{

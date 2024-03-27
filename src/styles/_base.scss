@@ -1,6 +1,19 @@
 @use "sass:map";
 @import "./variables";
 
+@supports (not selector(::-webkit-scrollbar)) and (not selector(::-webkit-scrollbar-thumb)){
+    *{
+        scrollbar-width: thin;    
+    }
+}
+@supports selector(::-webkit-scrollbar) and selector(::-webkit-scrollbar-thumb){
+    ::-webkit-scrollbar{
+        width: 6px;
+    }
+    ::-webkit-scrollbar-thumb{
+        border-radius: 3px;
+    }
+}
 *{
     box-sizing: border-box;
 }
@@ -15,18 +28,11 @@ a{
 }
 html{
     scroll-behavior: smooth;
-    //scroll-padding-top: 50px;
+    scroll-padding-top: 30px;
 }
 body{
     margin: 0;
     font-family: "Raleway", sans-serif;
-    scrollbar-width: thin;    
-    &::-webkit-scrollbar{
-        width: 6px;
-    }
-    &::-webkit-scrollbar-thumb{
-        border-radius: 3px;
-    }
     header{
         position: fixed;
         width: 100%;
